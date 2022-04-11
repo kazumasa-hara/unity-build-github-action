@@ -139,6 +139,13 @@ inputs:
       Required for Android builds.
     required: false
     default: ''
+  minify-with-r8:
+    description: >
+      Specify whether to enable R8.
+
+      Required for Android builds.
+    required: false
+    default: false
   temporary-directory:
     description: >
       Specify a temporary folder for the Xcode project files that Unity outputs during iOS build.

@@ -9,7 +9,8 @@ export default class UnityBuildScriptHelper
         keystore?: string,
         keystorePassword?: string,
         keystoreAlias?: string,
-        keystoreAliasPassword?: string): string
+        keystoreAliasPassword?: string,
+		minifyWithR8: boolean = false): string
     {
         return `using System;
 using System.IO;
@@ -33,6 +34,7 @@ public class UnityBuildScript
     const string KeystorePassword = "${keystorePassword}";
     const string KeystoreAlias = "${keystoreAlias}";
     const string KeystoreAliasPassword = "${keystoreAliasPassword}";
+    const bool MinifyWithR8 = "${minifyWithR8}";
 
     static string GetBuildTargetOutputFileName()
         => EditorUserBuildSettings.activeBuildTarget switch {
@@ -79,6 +81,8 @@ public class UnityBuildScript
         if (!string.IsNullOrWhiteSpace(KeystoreAliasPassword)) {
             PlayerSettings.Android.keyaliasPass = KeystoreAliasPassword;
         }
+
+        PlayerSettings.Android.minifyWithR8 = MinifyWithR8;
     }
 
     private static void PerformBuild()

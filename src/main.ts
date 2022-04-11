@@ -92,7 +92,8 @@ async function BuildUnityProject(outputDirectory: string)
 			keystore,
 			core.getInput('keystore-password'),
 			core.getInput('keystore-alias'),
-			core.getInput('keystore-alias-password')
+			core.getInput('keystore-alias-password'),
+			core.getInput('minify-with-r8')
 		)
 
 		const cs = path.join(core.getInput('project-directory'), 'Assets', 'Editor', 'UnityBuildScript.cs')

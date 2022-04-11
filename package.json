@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akiojin/unity-bulid-github-action.git"
+    "url": "git+https://github.com/kazumasa-hara/unity-bulid-github-action.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/akiojin/unity-bulid-github-action/issues"
+    "url": "https://github.com/kazumasa-hara/unity-bulid-github-action/issues"
   },
-  "homepage": "https://github.com/akiojin/unity-bulid-github-action#readme",
+  "homepage": "https://github.com/kazumasa-hara/unity-bulid-github-action#readme",
   "dependencies": {
     "@actions/core": "^1.6.0",
     "@actions/exec": "^1.1.0",
